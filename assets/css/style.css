@@ -64,7 +64,13 @@ html {
     height: 100%;
 }
 .carousel-caption {
-    padding-bottom: 20%;
+    padding-bottom: 2%;
+}
+.copyright {
+  color: white;
+  font-size: 12pt;
+  position: fixed;
+  top: 96%;
 }
 
 /* Background images are set within the HTML using inline CSS, not here */
