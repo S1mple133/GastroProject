@@ -1,17 +1,85 @@
 .carousel {
   width: 100%;
+  position: relative;
+  height: 100%;
 }
 
-html, body { height: 100%; width: 100%; margin: 0; }
+html, body { height: 100%; width: 100%; background: #00004c; z-index: 0;margin: 0; }
 
 .alert {
   position: absolute;
   bottom: 0;
   margin: 0;
-  margin-left: 25%;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+/* For devices which are smaller than 960 pixels */
+@media only screen and (max-height: 959px) {
+  .carousel-item {
+    max-height: 959px;
+  }
+}
+
+/* For Tablets */
+@media only screen and (min-width: 768px) and (max-height: 959px) {
+  .carousel-item {
+    max-height: 959px;
+  }
+}
+
+/* For all mobiles */
+@media only screen and (max-width: 767px) {
+  .carousel-item {
+    max-height: 767px;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait  */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .carousel-item {
+    max-height: 767px;
+  }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  .carousel-item {
+    max-height: 479px;
+  }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 1980px) {
+  .carousel-item {
+    max-height: 1980px;
+  }
 }
 
 .img {
-    filter: brightness(0.25);
-    max-height: 650px;
+    filter: brightness(0.45);
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.navbar{
+  position:fixed;
+  z-index:1;
+  border-color:transparent;
+  color:white;
+}
+
+.alert-dark {
+  position: absolute;
+  z-index:1;
+  border-color:transparent;
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
 }
