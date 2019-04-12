@@ -66,9 +66,9 @@ html {
 .copyright {
   color: white;
   font-size: 12pt;
-  position: fixed;
-  top: 95%;
-  left: 88%;
+  position: absolute;
+  top: 94%;
+  left: 85%;
 }
 
 #disappear {
@@ -76,14 +76,22 @@ html {
 }
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 3rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
+  font-weight: 250;
   line-height: 1;
   letter-spacing: -.05rem;
+  font-size: 200% !important;
+  color: green !important;
+  margin-top: 6% !important;
+}
+
+.register-container {
+  position: static;
+  margin: 2%;
 }
 
 @media (min-width: 40em) {
