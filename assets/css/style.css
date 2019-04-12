@@ -73,6 +73,10 @@ html {
   top: 96%;
 }
 
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:assets/img/7655.png");
+}
+
 /* Background images are set within the HTML using inline CSS, not here */
  .fill {
     width: 100%;
