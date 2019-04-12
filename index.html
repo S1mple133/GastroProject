@@ -15,7 +15,7 @@
   <body>
 
     <!-- Navbar -->
-    <nav class="navbar-expand-lg navbar navbar-dark navbar-center">
+    <nav id="disappear" class="navbar-expand-lg navbar navbar-dark navbar-center">
       <a class="navbar-brand" href="#">GastronomieSuche</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -64,7 +64,66 @@
     </a>
   </div>
 
+  <!-- Featurets -->
+  <div style="margin-top: 2%;" class="container marketing">
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading"><span class="text-muted">Benutzer-freundliches Design.</span></h2>
+    <p class="lead">GastronomieSuche hat ein Benutzer-freundiches Design und kann von jedem benutzt werden!</p>
+  </div>
+  <div class="col-md-5">
+    <img class="featurette-image img-fluid mx-auto" src="assets/img/easytouse.png" alt="Generic placeholder image">
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7 push-md-5">
+    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+  <div class="col-md-5 pull-md-7">
+    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+  <div class="col-md-5">
+    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+  </div>
+</div>
+
+<hr class="featurette-divider">
+</div>
+
+<footer>
+  <p style="padding-right: 2%;" class="float-right"><a href="#">Back to top</a></p>
+  <p style="padding-left: 2%;" >&copy; 2017 GastronomieSuche &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+</footer>
+
   <!-- Scripts -->
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    if($(window).height() - $(window).scrollTop() > 30) {
+          document.getElementById("disappear").style.top = "0";
+    }
+  } else {
+    document.getElementById("disappear").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
