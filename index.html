@@ -13,6 +13,19 @@
     <title>GastronomieSuche</title>
   </head>
   <body>
+  <script src="assets/js/scripts.js" type="text/javascript"></script>
+
+    <!-- Ask for Type -->
+<div id="askType" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <p style="color:gray;font-size:20px;margin: 0.7%;">Betreiben Sie ein Unternehmen oder sind Sie ein Arbeitssuchender ?</p>
+    <span class="company">Unternehmen</span>
+    <span class="worker">Arbeitssuchender</span>
+  </div>
+
+</div>
 
     <!-- Navbar -->
     <nav id="disappear" class="navbar-expand-lg navbar navbar-dark navbar-center">
@@ -23,9 +36,8 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div id="nav" class="navbar-nav">
           <a class="nav-item nav-link active" href="#">Home</a>
-          <a class="nav-item nav-link" href="register.html">Registrieren</a>
-          <a class="nav-item nav-link" href="#">Einloggen</a>
-          <a class="nav-item nav-link" href="#">Preisangabe</a>
+          <a class="nav-item nav-link" onclick="doRegister();" href="#">Registrieren</a>
+          <a class="nav-item nav-link" onclick="doLogin();" href="#">Einloggen</a>
         </div>
       </div>
     </nav>
@@ -108,24 +120,34 @@
 
 <footer>
   <p style="padding-right: 2%;" class="float-right"><a href="#">Back to top</a></p>
-  <p style="padding-left: 2%;" >&copy; 2019 GastronomieSuche &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  <p style="padding-left: 2%;" >&copy; 2019 GastronomieSuche &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/agb.html">Terms</a></p>
 </footer>
 
-  <!-- Scripts -->
-<script>
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    if($(window).height() - $(window).scrollTop() > 30) {
-          document.getElementById("disappear").style.top = "0";
-    }
-  } else {
-    document.getElementById("disappear").style.top = "-50px";
+  <script>
+  // Ask user for company
+  var modal = document.getElementById('askType');
+  var company = document.getElementsByClassName("company")[0];
+  var worker = document.getElementsByClassName("worker")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  company.onclick = function() {
+    var d = new Date();
+    d.setTime(d.getTime() + (1*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "usertype=company;" + expires + ";path=/";
+    modal.style.display = "none";
   }
-  prevScrollpos = currentScrollPos;
-}
-</script>
+
+  worker.onclick = function() {
+    var d = new Date();
+    d.setTime(d.getTime() + (30*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "usertype=worker;" + expires + ";path=/";
+    modal.style.display = "none";
+  }
+
+  window.onLoad = loadAlert();
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

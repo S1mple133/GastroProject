@@ -8,23 +8,24 @@
     <!-- Bootstrap CSS -->
     <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
     <title>GastronomieSuche</title>
   </head>
   <body>
+      <script src="assets/js/scripts.js" type="text/javascript"></script>
+
     <!-- Navbar -->
     <nav id="disappear" class="navbar-expand-lg navbar navbar-dark navbar-center">
-      <a class="navbar-brand" href="#">GastronomieSuche</a>
+      <a class="navbar-brand" href="/index.html">GastronomieSuche</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div id="nav" class="navbar-nav">
-          <a class="nav-item nav-link" href="index.html">Home</a>
-          <a class="nav-item nav-link active" href="#">Registrieren</a>
+          <a class="nav-item nav-link active" href="/index.html">Home</a>
+          <a class="nav-item nav-link" onclick="doRegister();" href="#">Registrieren</a>
           <a class="nav-item nav-link" href="#">Einloggen</a>
-          <a class="nav-item nav-link" href="#">Preisangabe</a>
         </div>
       </div>
     </nav>
@@ -34,10 +35,20 @@
   <div class="carousel-inner">
     <div class="carousel-item active" data-interval="10000">
         <img src="assets/img/index-carousel2.jpg" class="img" alt="...">
+        <div class="carousel-caption">
+          <h5>Registrieren Sie sich heute!</h5>
+          <p>Im unteren Bereich dieser Webseite finden Sie das Anmeldeformular!<br />
+            Registrieren Sie sich, damit wir Ihre Suche erleichtern können.</p>
+        </div>
     </div>
 
     <div class="carousel-item" data-interval="10000">
       <img src="assets/img/index-carousel1.jpg" class="img" alt="...">
+      <div class="carousel-caption">
+        <h5>Registrieren Sie sich heute!</h5>
+        <p>Im unteren Bereich dieser Webseite finden Sie das Anmeldeformular!<br />
+          Registrieren Sie sich, damit wir Ihre Suche erleichtern können.</p>
+      </div>
 
     </div>
 
@@ -55,29 +66,29 @@
     </a>
   </div>
 
+<section id="registerFormular">
   <div class="container register-container">
-  <form>
     <div class="form-group">
-      <label for="exampleInputEmail1">Name</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <label for="emailAdress">Email</label>
+      <input type="email" name="email" class="form-control" id="emailAdress" aria-describedby="emailAdressHelp" placeholder="max_mustermann@gmail.com">
     </div>
+
     <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <label for="emailAdress">Passwort</label>
+      <input type="password" name="pass1" class="form-control" id="pass1" placeholder="*********">
     </div>
+
+  </br>
     <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Einloggen</button>
   </form>
   </div>
+</section>
 
 <hr class="divider">
 <footer>
   <p style="padding-right: 2%;" class="float-right"><a href="#">Back to top</a></p>
-  <p style="padding-left: 2%;" >&copy; 2019 GastronomieSuche &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  <p style="padding-left: 2%;" >&copy; 2019 GastronomieSuche &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/agb.html">Terms</a></p>
 </footer>
 </body>
 </html>

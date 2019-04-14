@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <title>GastronomieSuche</title>
+  </head>
+  <body>
+      <script src="assets/js/scripts.js" type="text/javascript"></script>
+
+    <!-- Navbar -->
+    <nav id="disappear" class="navbar-expand-lg navbar navbar-dark navbar-center">
+      <a class="navbar-brand" href="/index.html">GastronomieSuche</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div id="nav" class="navbar-nav">
+          <a class="nav-item nav-link active" href="/index.html">Home</a>
+          <a class="nav-item nav-link" href="#">Registrieren</a>
+          <a class="nav-item nav-link" onclick="doLogin();" href="#">Einloggen</a>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Carousel -->
+  <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="10000">
+        <img src="assets/img/index-carousel2.jpg" class="img" alt="...">
+        <div class="carousel-caption">
+          <h5>Registrieren Sie sich heute!</h5>
+          <p>Im unteren Bereich dieser Webseite finden Sie das Anmeldeformular!<br />
+            Registrieren Sie sich, damit wir Ihre Suche erleichtern können.</p>
+        </div>
+    </div>
+
+    <div class="carousel-item" data-interval="10000">
+      <img src="assets/img/index-carousel1.jpg" class="img" alt="...">
+      <div class="carousel-caption">
+        <h5>Registrieren Sie sich heute!</h5>
+        <p>Im unteren Bereich dieser Webseite finden Sie das Anmeldeformular!<br />
+          Registrieren Sie sich, damit wir Ihre Suche erleichtern können.</p>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <p class="copyright">&copy; GastronomieSuche 2019</p>
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+<section id="registerFormular">
+  <div class="container register-container">
+  <form>
+    <div class="form-group">
+      <label for="firstName">Vorname</label>
+      <input type="text" name="firstName" class="form-control" id="firstName" aria-describedby="firstnameHelp" placeholder="Vorname Eingeben">
+    </div>
+
+    <div class="form-group">
+      <label for="secondName">Nachname</label>
+      <input type="text" name="secondName" class="form-control" id="secondName" aria-describedby="secondnameHelp" placeholder="Nachname Eingeben">
+    </div>
+
+    <div class="form-group">
+      <label for="birthDate">Geburtsdatum</label>
+      <input type="date" name="birthdate" class="form-control" id="birthDate" aria-describedby="birthDateHelp" placeholder="Geburtsdatum Eingeben">
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Telefonnumer</label>
+      <input type="tel" name="phonenumber" class="form-control" id="phoneNumber" aria-describedby="phoneNumberHelp" placeholder="+43 0123456789" pattern="+[0-9]{2} [0-9]{10}">
+    </div>
+
+    <div class="form-group">
+      <label for="emailAdress">Email</label>
+      <input type="email" name="email" class="form-control" id="emailAdress" aria-describedby="emailAdressHelp" placeholder="max_mustermann@gmail.com">
+    </div>
+
+    <div class="form-group">
+      <label for="emailAdress">Passwort</label>
+      <input type="password" name="pass1" class="form-control" id="pass1" placeholder="*********">
+    </div>
+
+    <div class="form-group">
+      <label for="emailAdress">Passwort Wiederholen</label>
+      <input type="password" class="form-control" id="pass2" placeholder="*********">
+    </div>
+
+    <div class="form-group">
+      <label for="day1Date">Verfügbarkeitszeiten: </label></br>
+      <div class="container">
+        <label class="dayPreText">Monntag:</label>
+        <input type="time" name="fromMonday" class="form-control dayDate1" id="dayDate1" aria-describedby="day1Date"></input>
+        <label class="dayText">bis</label>
+        <input type="time" name="toMonday" class="form-control dayDate2" id="dayDate2" aria-describedby="day1Date"></input>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="container">
+        <label class="dayPreText">Dienstag:</label>
+        <input type="time" name="fromTuesday" class="form-control dayDate1" id="dayDate1" aria-describedby="day1Date"></input>
+        <label class="dayText">bis</label>
+        <input type="time" name="toTuesday" class="form-control dayDate2" id="dayDate2" aria-describedby="day1Date"></input>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="container">
+        <label class="dayPreText">Mittwoch:</label>
+        <input type="time" name="fromWednesday" class="form-control dayDate1" id="dayDate1" aria-describedby="day1Date"></input>
+        <label class="dayText">bis</label>
+        <input type="time" name="toWednesday" class="form-control dayDate2" id="dayDate2" aria-describedby="day1Date"></input>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="container">
+        <label class="dayPreText">Donnerstag:</label>
+        <input type="time" name="fromThursday" class="form-control dayDate1" id="dayDate1" aria-describedby="day1Date"></input>
+        <label class="dayText">bis</label>
+        <input type="time" name="toThursday" class="form-control dayDate2" id="dayDate2" aria-describedby="day1Date"></input>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="container">
+        <label class="dayPreText">Freitag:</label>
+        <input type="time" name="fromFriday" class="form-control dayDate1" id="dayDate1" aria-describedby="day1Date"></input>
+        <label class="dayText">bis</label>
+        <input type="time" name="toFriday" class="form-control dayDate2" id="dayDate2" aria-describedby="day1Date"></input>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="container">
+        <label class="dayPreText">Samstag:</label>
+        <input type="time" name="fromSaturday" class="form-control dayDate1" id="dayDate1" aria-describedby="day1Date"></input>
+        <label class="dayText">bis</label>
+        <input type="time" name="toSaturday" class="form-control dayDate2" id="dayDate2" aria-describedby="day1Date"></input>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="container">
+        <label class="dayPreText">Sonntag:</label>
+        <input type="time" name="fromSunday" class="form-control dayDate1" id="dayDate1" aria-describedby="day1Date"></input>
+        <label class="dayText">bis</label>
+        <input type="time" name="toSunday" class="form-control dayDate2" id="dayDate2" aria-describedby="day1Date"></input>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="beginWork">Anfangsdatum: </label>
+        <input type="date" name="startDate" class="form-control startDate" id="startDate" aria-describedby="startDate"></input>
+        <label class="dateText">bis</label>
+        <input type="date" name="endDate" class="form-control endDate" id="endDate" aria-describedby="endDate"></input>
+    </div>
+
+  </br>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Bevor Sie sich anmelden, müssen Sie unsere <a href="agb.html">AGBs</a> akzeptieren.</label>
+    </div></br>
+    <button type="submit" class="btn btn-primary">Registrieren</button>
+  </form>
+  </div>
+</section>
+
+<hr class="divider">
+<footer>
+  <p style="padding-right: 2%;" class="float-right"><a href="#">Back to top</a></p>
+  <p style="padding-left: 2%;" >&copy; 2019 GastronomieSuche &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/agb.html">Terms</a></p>
+</footer>
+</body>
+</html>
