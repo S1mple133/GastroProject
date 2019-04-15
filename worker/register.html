@@ -192,5 +192,19 @@
   <p style="padding-left: 2%;" >&copy; 2019 GastronomieSuche &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/agb.html">Terms</a></p>
 </footer>
 
+<script>
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+          document.getElementById("disappear").style.top = "0";
+  } else {
+    document.getElementById("disappear").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
 </body>
 </html>
