@@ -26,6 +26,14 @@ html {
   padding-right: 25%;
 }
 
+.navbar-brand {
+  font-size: 150%;
+}
+
+.nav-item {
+  font-size: 120%;
+}
+
 .img {
     filter: brightness(0.45);
     height: 100% !important;
@@ -79,6 +87,26 @@ html {
   margin: 3rem 0; /* Space out the Bootstrap <hr> more */
 }
 
+.featurette-image {
+  position: absolute;
+    margin-top: -300px;
+}
+
+.featurette-image.pull-left,
+.featurette-image.pull-right {
+  display: block;
+  float: none;
+  max-width: 40%;
+  margin: 0 auto 20px;
+}
+
+.featurette-image.pull-left {
+  margin-right: 750px;
+}
+.featurette-image.pull-right {
+  margin-left: 750px;
+}
+
 /* Thin out the marketing headings */
 .featurette-heading {
   font-weight: 250;
@@ -92,6 +120,12 @@ html {
 .register-container {
   position: static;
   margin: 2%;
+}
+
+.form-header {
+  position: static;
+  margin-left: 3%;
+  margin-top: 2%;
 }
 
 /* Ask user for Worker or Company */
