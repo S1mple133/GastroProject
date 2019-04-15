@@ -20,10 +20,10 @@ function doRegister() {
   var type = getCookie("usertype");
 
   if (type == "worker") {
-    window.location.replace("worker/register.html");
+    window.location.replace("/worker/register.html");
   }
   else if(type=="company") {
-    window.location.replace("company/register.html");
+    window.location.replace("/company/register.html");
   }
 }
 
@@ -47,9 +47,9 @@ function doLogin() {
   var type = getCookie("usertype");
 
   if (type == "worker") {
-    window.location.replace("worker/login.html");
+    window.location.replace("/worker/login.html");
   }
   else if(type=="company") {
-    window.location.replace("company/login.html");
+    window.location.replace("/company/login.html");
   }
 }
